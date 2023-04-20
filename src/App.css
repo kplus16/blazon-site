@@ -7,6 +7,11 @@ body {
     margin: 0;
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
+
+/* NAVBAR */
 .navbar {
   background-color: black;
   color: white;
@@ -47,15 +52,25 @@ body {
   align-items: center;
 }
 
+/* SECTION */
 section{
+  border-radius: 25px;
+  margin: 1rem;
+  max-height: 90vh;
+  /* filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0)); */
+}
+
+
+
+/* HERO SECTION */
+.hero-container{
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 25px;
-  margin: 1rem;
   height: 90vh;
-  /* filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0)); */
 }
+
+
 
 .video-container{
   display: flex;
@@ -98,14 +113,14 @@ section{
   display: flex;
   align-items: center;
   justify-content: center;
-  content: 'Get Started!';
+  content: 'GET STARTED!';
   color: black;
   position: absolute;
   bottom: 0;
   height: inherit;
   width: inherit;
   border-radius: inherit;
-  background-color: #777;
+  background-color: #ffffff;
   transition: transform 300ms ease-in-out;
   transform: scaleX(1);
   transform-origin: right;
@@ -119,14 +134,14 @@ section{
   display: flex;
   align-items: center;
   justify-content: center;
-  content: 'Get Started!';
-  color: black;
+  content: 'GET A QUOTE!';
+  color: rgb(255, 255, 255);
   position: absolute;
   bottom: 0;
   height: inherit;
   width: inherit;
   border-radius: inherit;
-  background-color: white;
+  background-color: #eb2227;
   transition: transform 300ms ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
@@ -140,3 +155,42 @@ section{
 
 
 
+/* SERVICES SECTION */
+.section-services{
+  height: 50vh;
+}
+.section-services h1{
+  text-align: center;
+  padding-top: 4rem;
+  height: 20%;
+}
+.services-container{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1rem;
+  height: 100%;
+}
+.services-container div{
+  background-color: #eb2227;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+}
+.services-container h4{
+  display: block;
+}
+
+/* Modal Page */
+
+.modalpage{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

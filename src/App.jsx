@@ -3,18 +3,22 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Quote from './pages/Quote'
 import Navbar from './components/Navbar'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 
 function App() {
+  const location = useLocation();
   return (
     <>
       <Navbar />
       <div className='container'>
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/about" element={<About />}/>
-          <Route path="/quote" element={<Quote />}/>
-        </Routes>
+        <AnimatePresence initial={false}>
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<Home />}/>
+            <Route path="/about" element={<About />}/>
+            <Route path="/quote" element={<Quote />}/>
+          </Routes>
+        </AnimatePresence>
       </div>
     </>
   )
