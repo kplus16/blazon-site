@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 *{
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 body {
     margin: 0;
@@ -13,7 +15,7 @@ body {
   align-items: stretch;
   gap: 2rem;
   padding: 0 1rem;
-  height: 2rem;
+  height: 3rem;
 }
 
 .navbar ul{
@@ -45,7 +47,96 @@ body {
   align-items: center;
 }
 
-section.hero {
-  
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  margin: 1rem;
+  height: 90vh;
+  /* filter: drop-shadow(0 0 0.5rem rgb(0, 0, 0)); */
 }
+
+.video-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-container video{
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  object-fit: fill;
+  overflow: clip;
+  /* filter: blur(2px); */
+}
+
+.header-container {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container a{
+  margin: auto;
+  border-radius: 15px;
+  height: 4rem;
+  width: 15rem;
+  background-color: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+}
+.btn-heading::after{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: 'Get Started!';
+  color: black;
+  position: absolute;
+  bottom: 0;
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  background-color: #777;
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(1);
+  transform-origin: right;
+}
+.btn-heading:hover::after,
+.btn-heading:focus::after{
+  transform: scaleX(0);
+}
+
+.btn-heading::before{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: 'Get Started!';
+  color: black;
+  position: absolute;
+  bottom: 0;
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  background-color: white;
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.btn-heading:hover::before,
+.btn-heading:focus::before{
+  transform: scaleX(1);
+}
+
+
+
 
