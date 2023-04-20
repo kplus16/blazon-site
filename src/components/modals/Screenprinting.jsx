@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 
 export default function Screenprinting({open, onClose}){
-   
+      
     if(!open){
         return null
     }
