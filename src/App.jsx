@@ -1,13 +1,22 @@
 import './App.css'
+import Home from './pages/Home'
+import About from './pages/About'
+import Quote from './pages/Quote'
+import Navbar from './components/Navbar'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
-
   return (
-    <div className="App">
-      <h1>
-        Hey There! Glad you're here!
-      </h1>
-    </div>
+    <>
+      <Navbar />
+      <div className='container'>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/about" element={<About />}/>
+          <Route path="/quote" element={<Quote />}/>
+        </Routes>
+      </div>
+    </>
   )
 }
 
