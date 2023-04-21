@@ -12,7 +12,26 @@ export default function Services(){
     const [ isEmbroideryOpen, setEmbroideryOpen ] = useState(false)
     const [ isDTGOpen, setDTGOpen ] = useState(false)
 
-  
+    useEffect(() => {
+        if(isScreenprintOpen || isPromoitemsOpen || isEmbroideryOpen || isDTGOpen){
+            document.body.style.overflow = "hidden";
+        }else{
+            document.body.style.overflow = null;
+        }
+    }, [isScreenprintOpen, isPromoitemsOpen, isEmbroideryOpen, isDTGOpen])
+
+    const [offset, setOffset] = useState(0);
+
+    useEffect(() => {
+        const onScroll = () => setOffset(window.pageYOffset);
+        
+        window.addEventListener('scroll', onScroll, { passive: true });
+        
+        // clean up code
+        console.log(offset); 
+    }, [offset]);
+
+    
 
     return (
         <>

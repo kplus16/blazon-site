@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 *{
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
 body {
     margin: 0;
+    overflow-x: hidden;
 }
-
-body::-webkit-scrollbar{
-  display: none;
-}
-
 /* NAVBAR */
 .navbar {
   background-color: black;
@@ -93,12 +92,10 @@ section{
 
 .header-container {
   position: absolute;
-  justify-content: center;
-  align-items: center;
 }
 
 .header-container a{
-  margin: auto;
+  margin: 20px auto;
   border-radius: 15px;
   height: 4rem;
   width: 15rem;
@@ -109,6 +106,7 @@ section{
   text-decoration: none;
   color: white;
 }
+
 .btn-heading::after{
   display: flex;
   align-items: center;
@@ -185,12 +183,29 @@ section{
 
 .modalpage{
   position: absolute;
-  top: 0;
   left: 0;
+  top: 0;
   height: 100%;
   width: 100%;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.modal-content{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  border: solid;
+}
+
+.btn-close{
+  position: relative;
+}
+
+@layer components {
+  .btn-close {
+    @apply bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full;
+  }
 }

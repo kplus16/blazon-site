@@ -1,6 +1,7 @@
 import Hero from "../components/Hero"
 import Services from "../components/Services"
 import Blazon from "../components/Blazon"
+import Gmap from "../components/Gmap"
 import { motion } from "framer-motion"
 import { useEffect } from "react"
 
@@ -23,6 +24,7 @@ export default function Home(){
             <Hero />
             <Services />
             <Blazon />
+            <Gmap/>
         </motion.div>
         </>
     )
