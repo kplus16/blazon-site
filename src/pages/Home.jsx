@@ -3,7 +3,7 @@
 import Hero from "../components/Hero"
 import Services from "../components/Services"
 import Blazon from "../components/Blazon"
-import Contact from "../components/Contact"
+import ContactForm from "../components/ContactForm"
 import Footer from "../components/Footer"
 
 
@@ -31,7 +31,7 @@ export default function Home(){
             <Hero />
             <Services />
             <Blazon />
-            <Contact/>
+            <ContactForm />
             {/* <AboutVideo/> */}
         </motion.div>
         </>
