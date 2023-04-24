@@ -19,18 +19,6 @@ export default function Services(){
             document.body.style.overflow = null;
         }
     }, [isScreenprintOpen, isPromoitemsOpen, isEmbroideryOpen, isDTGOpen])
-
-    const [offset, setOffset] = useState(0);
-
-    useEffect(() => {
-        const onScroll = () => setOffset(window.pageYOffset);
-        
-        window.addEventListener('scroll', onScroll, { passive: true });
-        
-        // clean up code
-        console.log(offset); 
-    }, [offset]);
-
     
 
     return (

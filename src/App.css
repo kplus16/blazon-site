@@ -10,24 +10,18 @@ body {
     margin: 0;
     overflow-x: hidden;
 }
-/* NAVBAR */
-.navbar {
-  background-color: black;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 2rem;
-  padding: 0 1rem;
-  height: 3rem;
-}
 
-.navbar ul{
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-  display: flex;
-  gap: 1rem;
+.main-container{
+  margin-top: 5rem;
+}
+/* NAVBAR */
+
+.navbar {
+  transition: all .25s;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
 }
 
 .navbar a {
@@ -37,18 +31,29 @@ body {
   display: flex;
   align-items: center;
   padding: .25rem;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .navbar li.active {
   background-color: #555;
+  border-radius: 25px;
+  color: white;
 }
 
 .navbar li:hover{
   background-color: #777;
+  border-radius: 25px;
 }
 
-.container{
-  align-items: center;
+/* Navbar pop up */
+.scroll-down{
+  transform: translate3d(0, -100%, 0)
+}
+
+.scroll-up{
+  filter: drop-shadow(0 -10px 10px rgb(60, 60, 60));
+  opacity: .90;
 }
 
 /* SECTION */
@@ -181,27 +186,43 @@ section{
 
 /* Modal Page */
 
-.modalpage{
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 2;
+}
+
+.overlay {
+    background: rgba(255, 255, 255);
 }
 
 .modal-content{
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  border: solid;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #ffffff;
+    padding: 14px 28px;
+    border-radius: 3px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
+
 .btn-close{
-  position: relative;
+  position: absolute;
+  top: 5px;
+  right: 10px;
 }
 
 @layer components {
@@ -209,3 +230,6 @@ section{
     @apply bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-full;
   }
 }
+
+/* Blazon Section */
+

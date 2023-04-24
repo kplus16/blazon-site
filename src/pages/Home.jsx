@@ -10,9 +10,11 @@ import Aos from "aos"
 
 
 export default function Home(){
+    
     useEffect(() => {
         Aos.init({})
     }, [])
+
     return(
         <>
         <motion.div 
