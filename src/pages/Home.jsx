@@ -1,10 +1,15 @@
+
+// components
 import Hero from "../components/Hero"
 import Services from "../components/Services"
 import Blazon from "../components/Blazon"
-import Gmap from "../components/Gmap"
+import Contact from "../components/Contact"
+import Footer from "../components/Footer"
+
+
+// dependencies
 import { motion } from "framer-motion"
 import { useEffect } from "react"
-
 import Aos from "aos"
 
 
@@ -26,7 +31,8 @@ export default function Home(){
             <Hero />
             <Services />
             <Blazon />
-            <Gmap/>
+            <Contact/>
+            {/* <AboutVideo/> */}
         </motion.div>
         </>
     )

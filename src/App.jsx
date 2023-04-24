@@ -3,6 +3,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Quote from './pages/Quote'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import "aos/dist/aos.css"
@@ -21,6 +22,7 @@ function App() {
           </Routes>
         </AnimatePresence>
       </div>
+      <Footer/>
     </>
   )
 }
