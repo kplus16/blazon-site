@@ -35,12 +35,12 @@ export default function Navbar(){
         <nav className="bg-white navbar h-16" id="navbar">
             <div className="text-black max-w-7xl mx-auto h-full justify-stretch">
                 <div className="flex justify-between align-middle">
-                        <Link to="/" className="">
+                        <Link to="/" className="p-2">
                             <img width="220" className="hero-heading" src="https://weareblazon.com/wp-content/uploads/2021/02/logo.svg"/>
                         </Link>
-                    <ul className="flex list-none gap-4 align-middle m-4">
-                        <CustomLink to="/about" className="" >About</CustomLink>
-                        <CustomLink to="/quote" >Quote</CustomLink>
+                    <ul className="flex list-none gap-4 align-middle m-4 link-container">
+                        <CustomLink to="/about" >About</CustomLink>
+                        <CustomLink to="/quote" >Get a Quote!</CustomLink>
                     </ul>
                 </div>
             </div>

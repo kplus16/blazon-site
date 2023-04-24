@@ -48,7 +48,7 @@ export default function ContactForm(){
     return (
         <>
         <section className="text-center flex justify-center align-middle">
-            <div className="form bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-2/5 text-center h-96 flex flex-col justify-between">
+            <div className="form bg-white shadow-lg rounded px-8 pt-6 pb-8 mb-4 w-2/5 text-center h-96 flex flex-col justify-between">
                 <div className="progressbar">
                     <div className="w-full h-5 bg-gray-200 rounded-full dark:bg-gray-700">
                         <div className="bg-green-600 text-xs font-medium text-blue-100 text-center h-full p-0.5 leading-none rounded-full" style={{width: width}}></div>

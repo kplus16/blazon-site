@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import ContactForm from "../components/ContactForm"
 export default function About(){
     return(
         <>
@@ -9,6 +10,7 @@ export default function About(){
                 exit={{x:"-100%"}}
             >
                 <h1>About</h1>
+                <ContactForm />
             </motion.div>
         </>
     )
