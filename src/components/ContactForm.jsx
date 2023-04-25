@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import CustomerDetails from "./Form-components/CustomerDetails";
 import Questions from "./Form-components/Questions";
+import QuestionsTwo from "./Form-components/QuestionsTwo";
 import Quantity from "./Form-components/Quantity";
 import Deadline from "./Form-components/Deadline";
 import Other from "./Form-components/Other";
@@ -12,18 +13,20 @@ export default function ContactForm(){
     const [page, setPage] = useState(0);
     const [width, setWidth] = useState("");
 
-    const FormTitles = ["Customer Details", "Questions", "Quantity", "Deadline", "Other"]
+    const FormTitles = ["Customer Details", "Questions", "QuestionsTwo", "Quantity", "Deadline", "Other"]
 
     useEffect(() => {
         if(page === 0){
-            setWidth("20%")
+            setWidth("16%")
         }else if(page === 1){
-            setWidth("40%")
+            setWidth("32%")
         }else if(page === 2){
-            setWidth("60%")
+            setWidth("48%")
         }else if(page === 3){
-            setWidth("80%")
+            setWidth("64%")
         }else if(page === 4){
+            setWidth("80%")
+        }else if(page === 5){
             setWidth("100%")
         }
     }, [page])
@@ -34,8 +37,10 @@ export default function ContactForm(){
         }else if(page === 1){
             return <Questions/>
         }else if(page === 2){
-            return <Quantity/>
+            return <QuestionsTwo/>
         }else if(page === 3){
+            return <Quantity/>
+        }else if(page === 4){
             return <Deadline/>
         }else {
             return <Other />
@@ -55,20 +60,17 @@ export default function ContactForm(){
                         </div>
                 </div>
                 <div className="form-container w-full h-4/6">
-                    <div className="header">
-                        <h1>{FormTitles[page]}</h1>
-                    </div>
                     <div className="form-body">
                         {PageDisplay()}
                     </div>
                 </div>
                 <div className="bottom-8">
                         <button 
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 m-1 rounded disabled:bg-blue-100"
+                        className="bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-l disabled:bg-gray-200"
                         disabled = {page ==  0}
                         onClick={() => setPage((prevCount) => prevCount-1)}>Prev</button>
                         <button 
-                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 m-1 rounded disabled:bg-blue-100"
+                        className="bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-r disabled:bg-gray-200"
                         disabled = {page ==  FormTitles.length -1}
                         onClick={() => setPage((prevCount) => prevCount+1)}>Next</button>
                     </div>
